@@ -54,17 +54,7 @@ Este projeto demonstra um pipeline completo de Machine Learning para otimizar pa
 - O modelo com o maior valor de R² é identificado como o melhor, pois este coeficiente indica a proporção da variância da variável dependente que é explicável pelas variáveis independentes do modelo.
 - O modelo selecionado (`best_model`) é armazenado para uso posterior.
 
-## 7. Otimização de Parâmetros para Sugestão
-
-**Objetivo**: Utilizar o modelo treinado para encontrar os parâmetros agrícolas ideais que maximizam a produção.
-
-- Realiza uma **modelagem inversa**: ao invés de prever a produção, busca os inputs que maximizam a previsão de produção.
-- Define as features de otimização (`ph`, `umidade_pct`, `irrigacao_horas`, `n_mgkg`, `p_mgkg`, `k_mgkg`).
-- Define limites de otimização baseados nos valores mínimo e máximo observados no conjunto de treino (`feature_bounds`).
-- Utiliza `scipy.optimize.minimize` com o método 'L-BFGS-B' para encontrar os valores ótimos. A função objetivo é o negativo da previsão do modelo para maximizar a produção.
-- Exibe a produção máxima prevista e os valores ideais para cada parâmetro.
-
-## 8. Interface Interativa com Gradio
+## 7. Interface Interativa com Gradio
 
 **Objetivo**: Fornecer uma ferramenta prática e interativa para usuários finais, permitindo a seleção de cultura e tipo de solo para otimização personalizada.
 
